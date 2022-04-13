@@ -144,3 +144,25 @@ li {
   background-color: white;
   color: black;
 }
+
+/* CSS GRID STYLES (comment-out this section if grid is not needed)*/
+.product {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 40px;
+}
+
+.product-title {
+  grid-column: 1 / -1;
+}
+
+.product-info {
+  padding: 25px 0;
+}
+
+.product-details {
+  padding: 20px 20px 20px 0;
+}
+.add-cart {
+  grid-column: 1 / -1;
+}
