@@ -1,0 +1,50 @@
+/*
+-- 01 TYPOGRAPHY
+
+- font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- font weight: 400 (default)
+
+-  line height: 1 (default)
+
+-- 02 COLORS
+
+- Primary: #e67e22
+- Tints: 
+- Shades: 
+- Accents: 
+- Greys: #555
+
+-- 05 SHADOWS
+-- 06 BORDER-RADIUS
+-- 07 WHITESPACES
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+.hero {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+    width: 100%;
+}
