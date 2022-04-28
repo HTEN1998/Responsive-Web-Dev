@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
     <style>
+      .el {
+        flex-basis: 500px;
+        flex-shrink: 1;
+      }
       .el--1 {
         background-color: blueviolet;
+        align-self: flex-start; /* this property overides align-items property of container */
       }
       .el--2 {
         background-color: orangered;
@@ -18,6 +23,7 @@
       }
       .el--4 {
         background-color: goldenrod;
+        align-self: stretch;
       }
       .el--5 {
         background-color: palevioletred;
@@ -40,6 +46,10 @@
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
       }
     </style>
   </head>
