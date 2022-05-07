@@ -16,7 +16,7 @@
 - Tints: #fdf2e9, #fae5d3
 - Shades: #cf711f, #eb984e, #45260a
 - Accents: 
-- Greys: #6f6f6f (lightest grey) #555 #333
+- Greys: #767676 #6f6f6f (lightest grey) #555 #333 #888
 
 -- 05 SHADOWS
 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
@@ -71,6 +71,10 @@ body {
 
 .grid--4-cols {
   grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--centered-v {
@@ -162,7 +166,6 @@ body {
 .btn--form:hover {
   background-color: #fdf2e9;
   color: #45260a;
-
 }
 
 .all-recipes-link:link,
