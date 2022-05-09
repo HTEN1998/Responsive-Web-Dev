@@ -95,9 +95,60 @@ Instead, 1rem = 1em = 16px */
     grid-template-columns: 3fr 2fr;
   }
   .cta-form {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .btn--form {
-      margin-top: 1.2rem;
+    margin-top: 1.2rem;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+  }
+  .main-nav {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateX(100%);
+    transition: all 0.5s ease-in;
+    
+    /* Hide navigation */
+    /* display: none; */ /* Allows no transistion at all */
+    
+    /* 1) Hide it visually */
+    opacity: 0;
+    
+    /* 2) Make it unaccesible for mouse & keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen reader */
+    visibility: hidden;
+}
+.nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0%);
+  }
+  .nav-open .icon-mobile-nav[name="close"] {
+    display: block;
+  }
+  .nav-open .icon-mobile-nav[name="menu"] {
+    display: none;
+  }
+  .main-nav-list {
+    flex-direction: column;
+  }
+  .main-nav-linl:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
   }
 }
