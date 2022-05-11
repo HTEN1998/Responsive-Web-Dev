@@ -134,6 +134,7 @@
   color: #cf711f;
   font-weight: 700;
 }
+
 /* ********************************** */
 /* HOW IT WORKS SECTION */
 /* ********************************** */
@@ -447,6 +448,7 @@
   line-height: 1.6;
   text-align: center;
 }
+
 .feature-icon {
   color: #e67e22;
   height: 3.2rem;
@@ -516,6 +518,7 @@
   font-weight: 500;
   margin-bottom: 1.2rem;
 }
+
 .cta-form input,
 .cta-form select {
   width: 100%;

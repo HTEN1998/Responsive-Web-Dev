@@ -63,6 +63,7 @@ body {
 .grid:not(:last-child) {
   margin-bottom: 9.6rem;
 }
+
 .grid--2-cols {
   grid-template-columns: repeat(2, 1fr);
 }
@@ -78,6 +79,7 @@ body {
 .grid--centered-v {
   align-items: center;
 }
+
 .heading-primary,
 .heading-secondary .heading-tertiary {
   font-weight: 700;
@@ -209,7 +211,6 @@ body {
 }
 
 /* HELPER CLASSES */
-
 .margin-right-sm {
   margin-right: 1.6rem;
 }
