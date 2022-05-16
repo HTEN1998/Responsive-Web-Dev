@@ -1,12 +1,13 @@
-/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+/* rem & em do NOT depend on HTML font-size in media-queries.
+Instead, 1rem = 1em = 16px */
 
-/**************************/
-/* BELOW 1344px (Smaller desktops) */
-/**************************/
-
+/* ********************************** */
+/* BELOW 1344px (FOR SMALLER DESKTOP) */
+/* ********************************** */
 @media (max-width: 84em) {
+  /* 1344px/16 = 84em */
   .hero {
-    max-width: 120rem;
+    max-width: 120rem; /* here 1rem = 10px */
   }
 
   .heading-primary {
@@ -18,13 +19,13 @@
   }
 }
 
-/**************************/
-/* BELOW 1200px (Landscape Tablets) */
-/**************************/
-
+/* ********************************** */
+/* BELOW 1200px (FOR LANDSCAPE TABLETS) */
+/* ********************************** */
 @media (max-width: 75em) {
+  /* 1200px/16 = 75em */
   html {
-    /* 9px / 16px  */
+    /* 9px/16 = 0.5625 */
     font-size: 56.25%;
   }
 
@@ -38,7 +39,7 @@
   }
 
   .heading-tertiary {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 
   .header {
@@ -58,13 +59,13 @@
   }
 }
 
-/**************************/
-/* BELOW 944px (Tablets) */
-/**************************/
-
-@media (max-width: 59em) {
+/* ********************************** */
+/* BELOW 944px (TABLETS) */
+/* ********************************** */
+@media (max-width: 75em) {
+  /* 944px/16 = 75em */
   html {
-    /* 8px / 16px = 0.5 = 50% */
+    /* 8px/16 = 0.5 = 50% */
     font-size: 50%;
   }
 
@@ -109,7 +110,7 @@
   }
 
   .cta {
-    /* 3/5 = 60% + 2/5 = 40% */
+    /* 3/5 = 60%  2/5 = 30% */
     grid-template-columns: 3fr 2fr;
   }
 
@@ -127,30 +128,30 @@
   }
 
   .main-nav {
-    background-color: rgba(255, 255, 255, 0.97);
+    background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    transform: translateX(100%);
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+
+    transform: translateX(100%);
     transition: all 0.5s ease-in;
 
     /* Hide navigation */
-    /* Allows NO transitions at all */
-    /* display: none; */
+    /* display: none; */ /* Allows no transistion at all */
 
     /* 1) Hide it visually */
     opacity: 0;
 
-    /* 2) Make it unaccessible to mouse and keyboard */
+    /* 2) Make it unaccesible for mouse & keyboard */
     pointer-events: none;
 
-    /* 3) Hide it from screen readers */
+    /* 3) Hide it from screen reader */
     visibility: hidden;
   }
 
@@ -158,33 +159,32 @@
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 
-  .nav-open .icon-mobile-nav[name="close-outline"] {
+  .nav-open .icon-mobile-nav[name="close"] {
     display: block;
   }
 
-  .nav-open .icon-mobile-nav[name="menu-outline"] {
+  .nav-open .icon-mobile-nav[name="menu"] {
     display: none;
   }
 
   .main-nav-list {
     flex-direction: column;
-    gap: 4.8rem;
   }
 
-  .main-nav-link:link,
+  .main-nav-linl:link,
   .main-nav-link:visited {
     font-size: 3rem;
   }
 }
 
-/**************************/
-/* BELOW 704px (Smaller tablets) */
-/**************************/
-
+/* ********************************** */
+/* BELOW 704px (SMALL TABLETS) */
+/* ********************************** */
 @media (max-width: 44em) {
+  /* 704px/16 = 44em */
   .grid--3-cols,
   .grid--4-cols {
     grid-template-columns: repeat(2, 1fr);
@@ -203,7 +203,7 @@
     width: 100%;
   }
 
-  .grid--footer {
+  .grid-footer {
     grid-template-columns: repeat(6, 1fr);
   }
 
@@ -219,13 +219,13 @@
   }
 }
 
-/**************************/
-/* BELOW 544px (Phones) */
-/**************************/
-
+/* ********************************** */
+/* BELOW 544px (PHONES) */
+/* ********************************** */
 @media (max-width: 34em) {
+  /* 544px/16 = 34em */
   .grid {
-    row-gap: 4.8rem;
+    row-gap: 3.4rem;
   }
 
   .grid--2-cols,
@@ -241,7 +241,7 @@
   }
 
   .section-hero {
-    padding: 2.4rem 0 6.4rem 0;
+    padding: 3.2rem 0 6.4rem 0;
   }
 
   .hero {
@@ -256,16 +256,16 @@
     height: 1.2rem;
   }
 
+  .step-img-box {
+    transform: translateY(2.4rem);
+  }
+
   .step-img-box:nth-child(2) {
     grid-row: 1;
   }
 
   .step-img-box:nth-child(6) {
     grid-row: 5;
-  }
-
-  .step-img-box {
-    transform: translateY(2.4rem);
   }
 
   .testimonials {
@@ -291,10 +291,54 @@
   }
 }
 
-/* 
-- Font sizes (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+/* ********************************** */
+/* Fixing Safari flexbox gap */
+/* ********************************** */
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
 
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-*/
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
