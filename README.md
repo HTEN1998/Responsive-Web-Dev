@@ -4,7 +4,7 @@ This repo contains starter files and final code for all sections and projects co
 
 ### Q1: Can I see the final version of the Omnifood project?
 
-**A:** Sure! Here you go: [Omnifood](https://www.omnifood.dev).
+**A:** Sure! Download the code and run index.html file of "09" folder.
 
 ### Q2: I want to put these projects in my portfolio. Is that allowed?
 
